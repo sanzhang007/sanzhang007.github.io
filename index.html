@@ -5,8 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
   <body>
+    <script>
+      axios.get('ip-api.com/json')
+      .then(data=>console.log(data))
+      .catch(err=>consol.log(err))
+    </script>
     <p>hello world</p>
   </body>
 </html>
