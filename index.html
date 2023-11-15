@@ -5,8 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/style.css" rel="stylesheet">
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
   </head>
   <body>
     <p>hello world</p>
+    <script>
+      axios.get("http://ip-api.com/json")//url地址 
+            .then(function(resp){
+              let res=JSON.stringify(resp.data)
+              console.log(res)
+              let elm=document.getElementById("ip-api")
+              elm.innerHTML=res
+            })
+    </script>
+    <div id="ip-api">
+      
+    </div>
   </body>
 </html>
